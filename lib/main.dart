@@ -1,8 +1,7 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter_abdan_rpl3/container_widget/latihan_container.dart';
+import 'package:flutter_abdan_rpl3/row_column.dart/latihan_row_widget.dart';
 
+// bagian main app (menjalankan aplikasi)
 void main() {
   runApp(MyApp());
 }
@@ -15,41 +14,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar:AppBar(
-          title: Text("Brewek Kartu Pokemon", 
-          style: TextStyle(
-            color: const Color.fromARGB(255, 255, 255, 255),
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            backgroundColor: const Color.fromARGB(255, 226, 50, 50),
-            fontStyle: FontStyle.italic, 
-            ),
-          ),
-          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-
-        ),
-        body: LatihanContainer(),
-      ),
-    );
+        appBar: AppBar(
+          // title: Text("Belajar Container"),
+          // backgroundColor: Colors.blue,
+        ), // AppBar
+        body: LatihanLayoutDua(), // Center
+      ), // Scaffold
+    ); // MaterialApp
   }
 }
 
 class HelloWidget extends StatelessWidget {
-  const new({
+  const HelloWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("udah siap belom", 
-      style: TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-        backgroundColor: Colors.red,
-        fontStyle: FontStyle.italic, 
-        ),
-      ),
+      child: Text(
+        "Hello Flutter",
+        style: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.amber,
+          fontStyle: FontStyle.italic,
+        ), // TextStyle
+      ), // Text
     );
   }
 }
