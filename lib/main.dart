@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_abdan_rpl3/row_column.dart/latihan_row_widget.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/ExpandedWidget.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LatihanWidget.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LayoutDua.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LayoutEmpat.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LayoutSatu.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LayoutTiga.dart';
+import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/StackWidget.dart';
 
 // bagian main app (menjalankan aplikasi)
 void main() {
@@ -18,7 +24,7 @@ class MyApp extends StatelessWidget {
           // title: Text("Belajar Container"),
           // backgroundColor: Colors.blue,
         ), // AppBar
-        body: LatihanLayoutDua(), // Center
+        body: Latihanwidget(), // Center
       ), // Scaffold
     ); // MaterialApp
   }
