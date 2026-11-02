@@ -177,92 +177,79 @@ class LatihanWidget extends StatelessWidget {
             ),
           ),
         ),
+        
         const SizedBox(height: 30),
         
         Row(
-          children: const [
+          children: [
             SizedBox(width: 20),
             Text(
               "Skill Keahlian:",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 31, 2, 244),
+                color: const Color.fromARGB(255, 31, 2, 244),
               ),
-            )
+            ),
           ],
         ),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            // Laravel
             Container(
               height: 120,
               width: 120,
-              margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
+              margin: EdgeInsets.only(right: 20, left: 20, top: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(width: 0.5),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    'https://cdn.brandfetch.io/domain/laravel.com/fallback/lettermark/theme/dark/h/400/w/400/icon?c=1bfwsmEH20zzEfSNTed',
-                  ),
+                image: DecorationImage(
+                  image: NetworkImage('https://cdn.brandfetch.io/domain/laravel.com/fallback/lettermark/theme/dark/h/400/w/400/icon?c=1bfwsmEH20zzEfSNTed'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
                 children: [
-                  // Container putih latar belakang ceklis
                   Positioned(
                     right: 6,
                     top: 6,
                     child: Container(
-                      width: 20,
-                      height: 20,
+                      width: 16,
+                      height: 16,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
                   ),
-                  // Icon ceklis biru di atas container putih
-                  const Positioned(
-                    right: 6,
-                    top: 6,
-                    child: Icon(
-                      Icons.check_circle,
-                      color: Colors.blue,
-                      size: 20,
-                    ),
+                  Positioned(
+                    right: 3,
+                    top: 2,
+                    child: Icon(Icons.check_circle, color: Colors.blue),
                   ),
-                  const Positioned(
-                    right: 8,
-                    bottom: 6,
+                  Positioned(
+                    right: 5,
+                    bottom: 3,
                     child: Text(
                       "Laravel",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
-
-            // Tailwind
             Container(
               height: 120,
               width: 120,
-              margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
+              margin: EdgeInsets.only(right: 20, left: 20, top: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(width: 0.5),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KRF2KUVqHuSh4jJccD2jSJ7hAgRDt0AN9_kAQeDzZA&s=10',
-                  ),
+                image: DecorationImage(
+                  image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KRF2KUVqHuSh4jJccD2jSJ7hAgRDt0AN9_kAQeDzZA&s=10'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -272,51 +259,42 @@ class LatihanWidget extends StatelessWidget {
                     right: 6,
                     top: 6,
                     child: Container(
-                      width: 20,
-                      height: 20,
+                      width: 16,
+                      height: 16,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
                   ),
-                  const Positioned(
-                    right: 6,
-                    top: 6,
-                    child: Icon(
-                      Icons.check_circle,
-                      color: Colors.blue,
-                      size: 20,
-                    ),
+                  Positioned(
+                    right: 3,
+                    top: 2,
+                    child: Icon(Icons.check_circle, color: Colors.blue),
                   ),
-                  const Positioned(
-                    right: 8,
-                    bottom: 6,
+                  Positioned(
+                    right: 5,
+                    bottom: 3,
                     child: Text(
                       "Tailwind",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
-
-            // Flutter
             Container(
               height: 120,
               width: 120,
-              margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
+              margin: EdgeInsets.only(right: 20, left: 20, top: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(width: 0.5),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3B7lR_13JZiYs545iZdVin_XGI2A2J72pI4T2azHfP7OI9CYOxs9K2cbf&s=10',
-                  ),
+                image: DecorationImage(
+                  image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3B7lR_13JZiYs545iZdVin_XGI2A2J72pI4T2azHfP7OI9CYOxs9K2cbf&s=10'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -326,35 +304,30 @@ class LatihanWidget extends StatelessWidget {
                     right: 6,
                     top: 6,
                     child: Container(
-                      width: 20,
-                      height: 20,
+                      width: 16,
+                      height: 16,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
                   ),
-                  const Positioned(
-                    right: 6,
-                    top: 6,
-                    child: Icon(
-                      Icons.check_circle,
-                      color: Colors.blue,
-                      size: 20,
-                    ),
+                  Positioned(
+                    right: 3,
+                    top: 2,
+                    child: Icon(Icons.check_circle, color: Colors.blue),
                   ),
-                  const Positioned(
-                    right: 8,
-                    bottom: 6,
+                  Positioned(
+                    right: 5,
+                    bottom: 3,
                     child: Text(
                       "Flutter",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
