@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           // title: Text("Belajar Container"),
           // backgroundColor: Colors.blue,
         ), // AppBar
-        body: Latihanwidget(), // Center
+        body: LatihanWidget(), // Center
       ), // Scaffold
     ); // MaterialApp
   }
