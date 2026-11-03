@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_abdan_rpl3/listview_widget/latihan_list_widget.dart';
+import 'package:flutter_abdan_rpl3/listview_widget/list_basic.dart';
+import 'package:flutter_abdan_rpl3/listview_widget/list_builder2.dart';
+import 'package:flutter_abdan_rpl3/listview_widget/list_builder_widget.dart';
+import 'package:flutter_abdan_rpl3/listview_widget/list_separated.dart';
 import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/ExpandedWidget.dart';
 import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LatihanWidget.dart';
 import 'package:flutter_abdan_rpl3/sized_box_stack_expanded_position/LayoutDua.dart';
@@ -24,7 +29,7 @@ class MyApp extends StatelessWidget {
           // title: Text("Belajar Container"),
           // backgroundColor: Colors.blue,
         ), // AppBar
-        body: LatihanWidget(), // Center
+        body: latihanlistwidget(), // Center
       ), // Scaffold
     ); // MaterialApp
   }
