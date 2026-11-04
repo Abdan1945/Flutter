@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_abdan_rpl3/gridview/grid_basic.dart';
+import 'package:flutter_abdan_rpl3/gridview/grid_builder_widget.dart';
+import 'package:flutter_abdan_rpl3/gridview/grid_latihan_widget.dart';
 import 'package:flutter_abdan_rpl3/listview_widget/latihan_list_widget.dart';
 import 'package:flutter_abdan_rpl3/listview_widget/list_basic.dart';
 import 'package:flutter_abdan_rpl3/listview_widget/list_builder2.dart';
@@ -26,10 +29,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          // title: Text("Belajar Container"),
+          title: Text("Kuliner Nusantara"),
           // backgroundColor: Colors.blue,
         ), // AppBar
-        body: latihanlistwidget(), // Center
+        body: GridLatihanWidget(), // Center
       ), // Scaffold
     ); // MaterialApp
   }
