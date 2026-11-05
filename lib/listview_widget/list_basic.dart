@@ -9,22 +9,22 @@ class ListBasic extends StatelessWidget {
     return ListView(
       children: [
         Container(
-          width: 100,
+          width: 400,
           color: Colors.amber,
           child: Center(child: Text("Golongan Karya")),
         ),
         Container(
-          width: 100,
+          width: 400,
           color: Colors.red,
           child: Center(child: Text("PDI Perjuangan")),
         ),
         Container(
-          width: 100,
+          width: 400,
           color: Colors.blue,
           child: Center(child: Text("DEMOKRAT")),
         ),
         Container(
-          width: 100,
+          width: 400,
           color: Colors.green,
           child: Center(child: Text("PKB")),
         ),

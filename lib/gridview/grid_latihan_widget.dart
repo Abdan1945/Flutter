@@ -62,69 +62,78 @@ class GridLatihanWidget extends StatelessWidget {
     },
   ];
 
-  @override
+ @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      padding: EdgeInsets.all(10),
-      itemCount: kuliner.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
-        childAspectRatio: 0.8,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Latihan List Widget - Galeri Kuliner Nusantara'),
+        backgroundColor: const Color.fromARGB(255, 10, 10, 10),
+        foregroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      itemBuilder: (context, index) {
-        final data = kuliner[index];
+      body: GridView.builder(
+        padding: EdgeInsets.all(10),
+        itemCount: kuliner.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
+          childAspectRatio: 0.8,
+        ),
+        itemBuilder: (context, index) {
+          final data = kuliner[index];
 
-        return Card(
-          elevation: 3,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                data.containsKey('imageUrl')
-                    ? Image.network(
-                        data['imageUrl'],
-                        height: 150,
-                        width: 150,
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Icon(Icons.broken_image, size: 60, color: Colors.grey);
-                        },
-                      )
-                    : Icon(data['icon'], size: 60, color: data['warna']),
-                
-                SizedBox(height: 8),
-                Text(
-                  data['nama'],
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 4),
-                Text("Rp. ${data['harga']}"),
-
-                if (data.containsKey('khas')) ...[
-                  SizedBox(height: 4),
+          return Card(
+            elevation: 3,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  data.containsKey('imageUrl')
+                      ? Image.network(
+                          data['imageUrl'],
+                          height: 100, 
+                          width: 100,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Icon(Icons.broken_image, size: 60, color: Colors.grey);
+                          },
+                        )
+                      : Icon(data['icon'], size: 60, color: data['warna']),
+                  
+                  SizedBox(height: 8),
                   Text(
-                    data['khas'],
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600], fontStyle: FontStyle.italic),
+                    data['nama'],
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                ],
-
-                if (data.containsKey('description')) ...[
                   SizedBox(height: 4),
-                  Text(
-                    data['description'],
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 11, color: Colors.blueGrey),
-                  ),
+                  Text("Rp. ${data['harga']}"),
+
+                  if (data.containsKey('khas')) ...[
+                    SizedBox(height: 4),
+                    Text(
+                      data['khas'],
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 11, color: Colors.grey[600], fontStyle: FontStyle.italic),
+                    ),
+                  ],
+
+                  if (data.containsKey('description')) ...[
+                    SizedBox(height: 4),
+                    Text(
+                      data['description'],
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 10, color: Colors.blueGrey),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
